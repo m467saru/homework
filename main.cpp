@@ -11,9 +11,10 @@ int main(){
 	printf("10以下の正の整数を入力してくださいね\n");
 	scanf("%d",&box);
 	printf("この時点でのbox...box=%d\n",box);
-	ans = box % ( box / 2 );
+	ans = box % 2 ;
+	printf("この時点でのbox...box=%d\n",box);
 	printf("この時点でのans...ans=%d\n",ans);
-	if (ans == 2) printf("偶数が入力されました。偶数の場合は演算を行いません。ans=%d",ans); //偶数の場合：何もしない
+	if (ans == 0) printf("偶数が入力されました。偶数の場合は演算を行いません。ans=%d",ans); //偶数の場合：何もしない
 		else { 
 			printf("奇数が入力されました%d\n",box);
 			sum = sum + box;
@@ -22,9 +23,11 @@ int main(){
 	for (box=0;sum <= 20;box=0){
 	
 		printf("10以下の正の整数を入力してください\n");
-		box = scanf("%d",&boxp);
-			ans % box / (box/2);
-		if (ans == 2) printf("forループ内で偶数が検出されました。"); //偶数の場合：何もしない
+		scanf("%d",&box);
+			ans = box % 2;
+		if (ans == 0) {
+			printf("forループ内で偶数が検出されました。"); 
+			}//偶数の場合：何もしない
 			else { 
 				printf("奇数が入力されましたbox=%d\n",box);
 				sum = sum + box;
