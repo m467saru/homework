@@ -8,28 +8,25 @@ int main(){
 	int sum = 0; //入力された数を入れていく変数
 	int ans = 0; //あまりを入れる変数
 	
-	printf("10以下の正の整数を入力してくださいね\n");
+	printf("10以下の正の整数を入力してください\n");
 	scanf("%d",&box);
-	printf("この時点でのbox...box=%d\n",box);
 	ans = box % 2 ;
-	printf("この時点でのbox...box=%d\n",box);
-	printf("この時点でのans...ans=%d\n",ans);
-	if (ans == 0) printf("偶数が入力されました。偶数の場合は演算を行いません。ans=%d",ans); //偶数の場合：何もしない
+	if (ans == 0) printf("偶数が入力されました。偶数の場合は演算を行いません。"); //偶数の場合：何もしない
 		else { 
-			printf("奇数が入力されました%d\n",box);
+			printf("奇数が入力されました\n");
 			sum = sum + box;
 		} //それ意外（奇数の場合）出力と演算を行う
 	
-	for (box=0;sum <= 20;box=0){
+	for (box=0;sum<=20;box=0){
 	
 		printf("10以下の正の整数を入力してください\n");
 		scanf("%d",&box);
 			ans = box % 2;
 		if (ans == 0) {
-			printf("forループ内で偶数が検出されました。"); 
+			printf("偶数が入力されました。偶数の場合は演算を行いません。"); 
 			}//偶数の場合：何もしない
 			else { 
-				printf("奇数が入力されましたbox=%d\n",box);
+				printf("奇数が入力されました。",box);
 				sum = sum + box;
 	
 			}
